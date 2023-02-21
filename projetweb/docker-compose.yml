@@ -18,7 +18,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8080:80
+      - 60000:80
     environment:
       PMA_HOST: mysql
       UPLOAD_LIMIT: 64M
@@ -35,7 +35,7 @@ services:
       - FLASK_DEBUG=development
       - DATABASE_URL=mysql://root@mysql:3306/rna
     depends_on:
-      - db
+      - mysql
 
 volumes:
   db-data:
