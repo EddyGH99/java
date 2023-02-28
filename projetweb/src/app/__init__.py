@@ -27,8 +27,8 @@ def about():
 @app.route('/assos')
 def assos():
   datas = Data.query.limit(10).all()
-  #for data in datas:
-  #  print(f"{data.rna_id}")
+  for data in datas:
+    print(f"{data.rna_id}")
   
   #stmt = select(Data)
   #result = db.session.execute(stmt)
