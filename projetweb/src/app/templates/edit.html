@@ -1,23 +1,36 @@
-<!DOCTYPE html>
 {% extends 'base.html' %}
-
-{% block title %}<title>Edit Page</title>{% endblock %}
-
+{% block title %}
+<title>Modifier :</title>
+{% endblock %}
 {% block content %}
-    <h1>Edit</h1>
-    <form method="POST">
-        <div class="form-group">
-            <label for="rna_id">RNA ID</label>
-            <input type="text" class="form-control" name="rna_id" value="{{ data.rna_id }}">
-        </div>
-        <div class="form-group">
-            <label for="rna_id_ex">RNA ID EX</label>
-            <input type="text" class="form-control" name="rna_id_ex" value="{{ data.rna_id_ex }}">
-        </div>
-        <div class="form-group">
-            <label for="gestion">Gestion</label>
-            <input type="text" class="form-control" name="gestion" value="{{ data.gestion }}">
-        </div>
-        <button type="submit" class="btn btn-primary">Save</button>
-    </form>
+
+
+<h1>Modifier :</h1>
+
+<form method="POST">
+
+    <br>
+    <br>
+    <div class="form-group">
+        <label for="rna_id">RNA ID</label>
+        <input type="text" class="form-control" id="rna_id" name="rna_id" value="{{ data.rna_id }}" required>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <label for="rna_id_ex">RNA ID EX</label>
+        <input type="text" class="form-control" id="rna_id_ex_id" name="rna_id_ex_id" value="{{ data.rna_id_ex_id }}" required>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+        <label for="gestion">Gestion</label>
+        <input type="text" class="form-control" id="gestion" name="gestion" value="{{ data.gestion }}" required>
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="mon-bouton">Enregistrer</button>
+</form>
+
+
 {% endblock %}
