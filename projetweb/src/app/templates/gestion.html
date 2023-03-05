@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block content %}
-<h1>Gestion (diagramme en barre) :</h1>
+<h1>Gestion (Histrogramme) :</h1>
 <p>(curseur en bas gauche)</p>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Graphique gestion</title>
-    <!-- Inclure Chart.js -->
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -26,7 +26,7 @@
 	</select>
     
     <script>
-        // Récupérer les données depuis la base de données ou autre source
+
         const data = {
             labels: ['011S', '012P', '013S', '014S'],
             datasets: [{
@@ -37,8 +37,6 @@
                 borderWidth: 1
             }]
         };
-
-        // Créer le graphique
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'bar',
@@ -54,8 +52,7 @@
             }
         });
         var variableSelect = document.getElementById('variableSelect');
-		variableSelect.addEventListener('change', function() {
-			// Mettre à jour les données du graphique en fonction de la variable sélectionnée
+		variableSelect.addEventListener('change', function()
 			var selectedVariable = variableSelect.value;
 			if (selectedVariable === 'variable1') {
 				myChart.data.datasets[0].data = [1542];
@@ -66,7 +63,7 @@
 			}else if (selectedVariable === 'variable4') {
 				myChart.data.datasets[0].data = [1840];
 			}
-			// Mettre à jour le graphique
+
 			myChart.update();
 		});
     </script>
