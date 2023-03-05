@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}<title>Edit Page</title>{% endblock %}
+
+{% block content %}
+    <h1>Edit</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="rna_id">RNA ID</label>
+            <input type="text" class="form-control" name="rna_id" value="{{ data.rna_id }}">
+        </div>
+        <div class="form-group">
+            <label for="rna_id_ex">RNA ID EX</label>
+            <input type="text" class="form-control" name="rna_id_ex" value="{{ data.rna_id_ex }}">
+        </div>
+        <div class="form-group">
+            <label for="gestion">Gestion</label>
+            <input type="text" class="form-control" name="gestion" value="{{ data.gestion }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+{% endblock %}
