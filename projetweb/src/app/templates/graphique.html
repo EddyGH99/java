@@ -1,11 +1,3 @@
-{% extends 'base.html' %}
-
-{% block title %}<title>Page d'accueil</title>{% endblock %}
-
-{% block content %}
-    <h1>Hello world !</h1>
-{% endblock %}
-
 <!-- Élément canvas qui servira de conteneur pour le graphique -->
 <canvas id="monGraphique"></canvas>
 
@@ -15,11 +7,11 @@
 <script>
   // Récupérer les données depuis SQL et les convertir en format JSON
   var donnees = [
-    { "rnaId": "ID1", "data.rna_id_ex": 10 },
-    { "rnaId": "ID2", "data.rna_id_ex": 20 },
-    { "rnaId": "ID3", "data.rna_id_ex": 30 },
-    { "rnaId": "ID4", "data.rna_id_ex": 40 },
-    { "rnaId": "ID5", "data.rna_id_ex": 50 }
+    { "rnaId": "ID1", "rnaIdEx": 10 },
+    { "rnaId": "ID2", "rnaIdEx": 20 },
+    { "rnaId": "ID3", "rnaIdEx": 30 },
+    { "rnaId": "ID4", "rnaIdEx": 40 },
+    { "rnaId": "ID5", "rnaIdEx": 50 }
   ];
 
   // Configuration du graphique
